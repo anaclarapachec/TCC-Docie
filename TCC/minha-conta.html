@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta DOCIÊ</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="novoMenu">
+
+        <div class="container">
+
+            <div class="navbar">
+
+                <nav>
+                    <ul id="MenuItens">
+                        <li><a href="index.html" tiitle="">Início</a></li>
+                        <li><a href="produtos.html" tiitle="">Produtos</a></li>
+                        <li><a href="" tiitle="">Minha Conta</a></li>
+                        
+                    </ul>
+                </nav>
+
+                <a href="carrinho.html" title="">
+                <img src="assets/img/doces/carrinho.png" alt="" width="30px" height="30px">
+                </a>
+
+                <img src="assets/img/menu-barrinha.png" alt="" class="menu-celular" onclick="menucelular()">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="minha-conta">
+
+        <div class="container">
+
+            <div class="linha">
+
+                <div class="col-2">
+                    <img src="assets/img/doces/logo.png" alt="" width="100%">
+                </div>
+
+                <div class="col-2">
+
+                    <div class="formulario">
+
+                        <div class="btn-form">
+
+                            <span onclick="Entrar()"> Entrar </span>
+                            <span onclick="Cadastro()"> Cadastro </span>
+                            <hr id="Indicador">
+
+                        </div>
+
+                        <form action="" method="post" id="EntrarPainel">
+                            <input type="email" name="email" id="" placeholder="E-mail de acesso">
+                            <input type="password" name="senha" id="" placeholder="Digite sua senha">
+                            <button type="submit" name="senEntrar" class="btn"> Entrar </button>
+                            <a href="" title=""> Esqueceu sua senha? </a>
+                        </form>
+
+                        <form action="" method="post" id="CadastroSite">
+                            <input type="text" name="nome" id="" placeholder="Nome Completo">
+                            <input type="email" name="email" id="" placeholder="E-mail de acesso">
+                            <input type="password" name="senha" id="" placeholder="Digite sua senha">
+                            <button type="submit" name="senCad" class="btn"> Cadastre-se </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container-footer">
+
+            <div class="row-footer">
+
+                <div class="footer-col">
+                    <h4>ENTREGA</h4>
+                    <ul>
+                        <li><a href="#"> Produtos apenas <br> por encomendas, <br> taxa de entrega no <br> valor de R$5,00 </a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-col">
+                    <h4> CONTATOS</h4>
+                    <ul>
+                        <li><a href="#"> dociedoceriagourmet@gmail.com</a></li>
+                        <li><a href="#"> (14) 99636 - 0889 </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4> PAGAMENTOS</h4>
+                    <ul>
+                        <img src="assets/img/doces/logo visa.png" alt="VISA">
+                        <img src="assets/img/doces/logo mastercard.png" alt="MASTERCARD">
+                        <img src="assets/img/doces/logo bradesco.png" alt="BRADESCO">
+                        <br>
+                        <img src="assets/img/doces/logo BB.png" alt="BANCO DO BRASIL">
+                        <img src="assets/img/doces/logo itau.png" alt="ITAÚ">
+                        <img src="assets/img/doces/logo pix.png" alt="PIX">
+                    </ul>
+                </div>
+             
+                <div class="footer-col">
+                    <h4> CADASTRE-SE</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button> cadastrar </button>
+                        </form>
+                    </div>
+
+                    <div class="medias-socias">
+                        <a href="#"> <i class='bx bxl-instagram'></i> </a>
+                        <a href="#"> <i class='bx bxl-whatsapp' ></i> </a>
+                        <a href="#"> <i class='bx bx-envelope' ></i> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assests/js/login.js"></script>
+</body>
+</html>

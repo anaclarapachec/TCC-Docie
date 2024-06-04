@@ -1,0 +1,29 @@
+
+para acessar o site será em:
+culinariaeconfeitaria.com/docie
+
+****************************************
+Acesso ao FTP
+
+Abra o explorador de arquivos (Atalho - Tecla Windows + E)
+
+Digite na barra de acesso rápido 
+
+ftp://culinariaeconfeitaria.com/
+
+vai abrir uma tela para informar login e senha
+
+Usuário - u679404890.docie
+Senha   - Docie12@3
+
+****************************************
+
+Acesso ao Banco de Dados
+
+https://auth-db1142.hstgr.io/
+
+Usuário - u679404890_docie
+Senha   - Docie12@3
+
+
+****************************************
