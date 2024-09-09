@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dociê</title>
+    <link rel="stylesheet" href="assets/css/compras.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <div class="container">
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="assets/img/doces/bolo.png" alt="DOCIÊ">
+            </div>
+
+            <nav>
+                <ul id="MenuItens">
+                    <li><a href="index.html" title="">Início</a></li>
+                    <li><a href="produtos.html" title="">Produtos</a></li>
+                    <li><a href="cadastro.html" title="">Minha Conta</a></li>
+                    
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <main>
+    <div class="content">
+        <section>
+            <table>
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Preço</th>
+                  <th>Quantidade</th>
+                  <th>Total</th>
+                  <th>-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="product">
+                      <img src="assets/img/doces/destaque--2.PNG" alt="" width="100px" height="100px"/>
+                      <div class="info">
+                        <div class="name">BOLO CHOCOLATUDO</div>
+                        <div class="category">bolos</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>R$ 120</td>
+                  <td>
+                    <div class="qty">
+                      <button><i class="bx bx-minus"></i></button>
+                      <span>2</span>
+                      <button><i class="bx bx-plus"></i></button>
+                    </div>
+                  </td>
+                  <td>R$ 240</td>
+                  <td>
+                    <button class="remove"><i class="bx bx-x"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product">
+                      <img src="assets/img/doces/cenario-2.png" alt="" width="100px" height="100px"/>
+                      <div class="info">
+                        <div class="name">Nome do produto</div>
+                        <div class="category">Categoria</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>R$ 180</td>
+                  <td>
+                    <div class="qty">
+                      <button><i class="bx bx-minus"></i></button>
+                      <span>2</span>
+                      <button><i class="bx bx-plus"></i></button>
+                    </div>
+                  </td>
+                  <td>R$ 240</td>
+                  <td>
+                    <button class="remove"><i class="bx bx-x"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product">
+                      <img src="assets/img/doces/cenario-1.png" alt="" width="100px" height="100px" />
+                      <div class="info">
+                        <div class="name">Nome do produto</div>
+                        <div class="category">Categoria</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>R$ 150</td>
+                  <td>
+                    <div class="qty">
+                      <button><i class="bx bx-minus"></i></button>
+                      <span>2</span>
+                      <button><i class="bx bx-plus"></i></button>
+                    </div>
+                  </td>
+                  <td>R$ 240</td>
+                  <td>
+                    <button class="remove"><i class="bx bx-x"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <aside>
+            <div class="box">
+              <header>Resumo da compra</header>
+              <div class="info">
+                <div><span>Sub-total</span><span>R$ 410,00</span></div>
+                <div><span>Frete</span><span>R$5,00</span></div>
+              </div>
+              <footer>
+                <span>Total</span>
+                <span>R$ 415,00</span>
+              </footer>
+            </div>
+            <button>Finalizar Compra</button>
+          </aside>
+    </div>
+</main>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    // Função para atualizar o subtotal e o total do carrinho
+    function atualizarCarrinho() {
+      const rows = document.querySelectorAll("tbody tr");
+      let subtotal = 0;
+  
+      rows.forEach((row) => {
+        const preco = parseFloat(row.querySelector("td:nth-child(2)").textContent.replace("R$", "").replace(",", "."));
+        const quantidade = parseInt(row.querySelector(".qty span").textContent);
+        const total = preco * quantidade;
+        row.querySelector("td:nth-child(4)").textContent = "R$ " + total.toFixed(2).replace(".", ",");
+        subtotal += total;
+      });
+  
+      document.querySelector(".info div:nth-child(1) span:nth-child(2)").textContent = "R$ " + subtotal.toFixed(2).replace(".", ",");
+      const frete = 5.00; // Valor fixo do frete
+      const total = subtotal + frete;
+      document.querySelector("footer span:nth-child(2)").textContent = "R$ " + total.toFixed(2).replace(".", ",");
+    }
+  
+    // Função para alterar a quantidade de um produto
+    function alterarQuantidade(button, operacao) {
+      const span = button.closest(".qty").querySelector("span");
+      let quantidade = parseInt(span.textContent);
+  
+      // Verifica a operação e altera a quantidade
+      quantidade = operacao === "aumentar" ? quantidade + 1 : quantidade - 1;
+  
+      // Define a quantidade mínima como 1
+      if (quantidade < 1) {
+        quantidade = 1;
+      }
+  
+      // Atualiza o valor no span
+      span.textContent = quantidade;
+  
+      // Recalcula o subtotal e o total
+      atualizarCarrinho();
+    }
+  
+    // Função para remover um produto do carrinho
+    function removerProduto(button) {
+      const row = button.closest("tr");
+      row.remove();
+      atualizarCarrinho();
+    }
+  
+    // Event listeners para botões de aumentar, diminuir quantidade e remover produto
+    document.querySelectorAll(".bx-plus").forEach((button) => {
+      button.parentElement.addEventListener("click", () => alterarQuantidade(button, "aumentar"));
+    });
+  
+    document.querySelectorAll(".bx-minus").forEach((button) => {
+      button.parentElement.addEventListener("click", () => alterarQuantidade(button, "diminuir"));
+    });
+  
+    document.querySelectorAll(".remove").forEach((button) => {
+      button.addEventListener("click", () => removerProduto(button));
+    });
+  
+    // Inicializa o cálculo do carrinho ao carregar a página
+    window.addEventListener("DOMContentLoaded", atualizarCarrinho);
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dociê</title>
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+
+    <div class="container">
+
+            <div class="navbar">
+
+                <div class="logo">
+                    <img src="assets/img/doces/bolo.png" alt="DOCIÊ">
+                </div>
+
+                <nav>
+                    <ul id="MenuItens">
+                        <li><a href="index.html" title="">Início</a></li>
+                        <li><a href="produtos.html" title="">Produtos</a></li>
+                        <li><a href="cadastro.html" title="">Minha Conta</a></li>
+                        
+                    </ul>
+                </nav>
+
+                <img src="" alt="" class="menu-celular" onclick="menucelular()">
+
+            </div>
+
+    </div>
+
+    <div class="wrapper">
+        <div class="form-container sign-in">
+            <form action="#">
+                <h3>Login</h3>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <div class="username">
+                    <input type="text" id="signin-username" required>
+                    <label id="signin-username-label" for="signin-username">Nome</label>
+                </div>
+
+                <div class="password">
+                    <input type="text" id="signin-password" required>
+                    <label id="signin-password-label" for="signin-password">Senha</label>
+                </div>
+                <a href="alteração.html">
+                <p class="frgt-pass">Esqueceu sua senha? <span onclick="signup()"></span></p>
+                </a>
+                <button class="login-btn">Entrar</button>
+
+                <p class="dnt-have-account">Não tem uma conta? <span onclick="signup()">Crie uma.</span></p>
+            </form>
+        </div>
+        <div class="form-container sign-up">
+            <form action="#">
+                <h3> Criar</h3>
+                <div class="username">
+                    <input type="text" id="signup-username" required>
+                    <label for="signup-username">Nome</label>
+                </div>
+                <div class="email">
+                    <input type="text" id="signup-email" required>
+                    <label for="signup-email">Email</label>
+                </div>
+                <div class="password">
+                    <input type="text" id="signup-password" required>
+                    <label for="signup-password">Senha</label>
+                </div>
+                <div class="confirm-password">
+                    <input type="text" id="confirm-signup-password" required>
+                    <label for="confirm-signup-password">Confirme sua senha</label>
+                </div>
+
+                <button class="signup-btn">Confirmar</button>
+                <p class="alrd-have-account">Já tem uma conta? <span onclick="signin()">Entrar.</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/Form.js"></script>
+</body>
+</html>

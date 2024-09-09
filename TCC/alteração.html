@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dociê</title>
+    <link rel="stylesheet" href="assets/css/confirmar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+
+    <div class="container">
+
+            <div class="navbar">
+
+                <div class="logo">
+                    <img src="assets/img/doces/bolo.png" alt="DOCIÊ">
+                </div>
+
+                <nav>
+                    <ul id="MenuItens">
+                        <li><a href="index.html" title="">Início</a></li>
+                        <li><a href="produtos.html" title="">Produtos</a></li>
+                        <li><a href="cadastro.html" title="">Minha Conta</a></li>
+                        
+                    </ul>
+                </nav>
+
+                <a href="carrinho.html" title="">
+                    <ion-icon name="cart-outline" class="carrinho-icone"></ion-icon>
+                </a>
+
+                <img src="" alt="" class="menu-celular" onclick="menucelular()">
+
+            </div>
+
+    </div>
+
+    <div class="fundo">
+        <h1>Crie uma nova senha</h1>
+        <p>Sua nova senha deve ser diferente da senha usada anteriormente</p>
+        <form action="#">
+            <div class="nova-senha">
+                <h3>Nova Senha</h3>
+                <input type="password" class="nova-senha-input" placeholder="Criar Senha">
+                <i class="fa-regular fa-eye eye"></i>
+                <i class="fa-regular fa-eye-slash eye-slash"></i>
+                <p>Deve ter pelo menos 8 caracteres.</p>
+            </div>
+            <div class="confirmar-senha">
+                <h3>Confirmar Senha</h3>
+                <input type="password" class="confirmar-senha-input" placeholder="Confirmar Senha" disabled>
+            </div>
+
+            <p class="mensagem">Ambas as senhas devem ser iguais.</p>
+            <button class="enviar-btn">Enviar</button>
+        </form>
+
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/Senha.js"></script>
+
+</body>
+</html>
