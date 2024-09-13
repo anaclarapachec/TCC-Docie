@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --cor-padrão: #7D354C;
+    --cor-fonte: #5a1b2f;
+    --cor-f-p: #555;
+    --cor-btn: #D8AEAE;
+    --cor-font-corpo: #555;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #FFFAF6;
+}
+
+.container{
+    max-width: 2000px;
+    margin: auto;
+    padding-left: 85px;
+    padding-right: 55px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar img{
+    width: 30%;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+.pedido-container {
+    background-color: #FFF7F0; /* Cor de fundo leve */
+    border: 1px solid #D8AEAE; /* Cor da borda */
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+h2, h3 {
+    color: var(--cor-padrão);
+}
+
+.informacoes-cliente, .informacoes-pedido {
+    margin-bottom: 20px;
+}
+
+.informacoes-cliente p, .informacoes-pedido p, .informacoes-pedido ul {
+    color: var(--cor-font-corpo);
+}
+
+.informacoes-pedido ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.opcoes-status {
+    display: flex;
+    gap: 15px;
+}
+
+.opcoes-status button {
+    background-color: var(--cor-btn);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

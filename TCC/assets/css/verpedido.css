@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --cor-padrão: #7D354C;
+    --cor-fonte: #5a1b2f;
+    --cor-f-p: #555;
+    --cor-btn: #D8AEAE;
+    --cor-font-corpo: #555;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #FFFAF6;
+}
+
+.container{
+    max-width: 2000px;
+    margin: auto;
+    padding-left: 85px;
+    padding-right: 55px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar img{
+    width: 30%;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+.pedido-container {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+    /* Adicione estas linhas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.pedido-container h2 {
+    color: var(--cor-fonte);
+    margin-bottom: 20px;
+}
+
+.status-pedido {
+    margin-bottom: 20px;
+}
+
+ul.progressbar {
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+}
+
+ul.progressbar li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+}
+
+ul.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    background-color: white;
+}
+
+ul.progressbar li.active:before {
+    background-color: var(--cor-padrão);
+    color: white;
+    border-color: var(--cor-padrão);
+}
+
+ul.progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+ul.progressbar li:first-child:after {
+    content: none;
+}
+
+ul.progressbar li.active:after {
+    background-color: var(--cor-padrão);
+}
+
+.endereco h3,
+.detalhes-pedido h3,
+.cancelar-pedido h3 {
+    color: var(--cor-fonte);
+    margin-top: 20px;
+}
+
+/* Cancelar pedido separado dos outros elementos */
+.cancelar-pedido {
+    margin-top: 50px; /* Aumentar a distância em relação aos elementos acima */
+    text-align: center;
+}
+
+.cancelar-pedido button {
+    padding: 12px 25px; /* Ajuste no tamanho do botão */
+    margin-top: 10px; /* Aumenta a distância entre o texto "Cancelar Pedido" e o botão */
+    background-color: var(--cor-padrão);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#mensagemCancelamento {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555; 
+}
+
+/* Aumentar espaçamento entre as bolinhas */
+ul.progressbar {
+    display: flex;
+    justify-content: space-between; /* Garante espaçamento entre as bolinhas */
+    padding: 0;
+    margin: 0;
+}
+
+ul.progressbar li {
+    width: auto; /* Remove largura fixa */
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+    flex-grow: 1; /* Faz com que os itens ocupem espaço flexível */
+}
+
+/* Espaço entre a bolinha e a escrita */
+ul.progressbar li span {
+    display: block;
+    margin-top: 15px; /* Aumenta o espaçamento entre a bolinha e o texto */
+    font-size: 12px;
+}
+
+/* Espaço extra entre as bolinhas em si */
+ul.progressbar li + li {
+    margin-left: 30px; /* Ajuste conforme necessário */
+}
+
+/* Endereço e Detalhes do pedido lado a lado */
+.endereco-e-detalhes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Para cada bloco individual (endereço e detalhes) */
+.endereco, .detalhes-pedido {
+    flex: 1;
+    margin: 0 20px; /* Pequeno espaçamento entre os blocos */
+}
+
+/* Garantir que o texto dentro de cada bloco fique alinhado */
+.endereco h3, .detalhes-pedido h3 {
+    text-align: left;
+}
+
+.endereco p, .detalhes-pedido p {
+    text-align: left;
+}
+
+.cancelar-pedido h4 {
+    margin-top: 20px;
+    color: var(--cor-fonte);
+}
+
+#cancelamentoForm {
+    margin-top: 20px;
+}
+
+#motivoCancelamento, #descricaoCancelamento {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#descricaoCancelamento {
+    resize: none;
+}
+
+#cancelamentoForm button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: var(--cor-padrão);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mensagemCancelamento {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--cor-fonte);
+}

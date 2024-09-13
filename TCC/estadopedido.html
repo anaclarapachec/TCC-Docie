@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCIÊ</title>
+    <link rel="stylesheet" href="assets/css/verpedido.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="assets/img/doces/bolo.png" alt="DOCIÊ">
+            </div>
+            <nav>
+                <ul id="MenuItens">
+                    <li><a href="index.html" title="">Início</a></li>
+                    <li><a href="bolos.html" title="">Produtos</a></li>
+                    <li><a href="cadastro.html" title="">Minha Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="pedido-container">
+        <h2>Estado do Pedido</h2>
+
+        <!-- Status do pedido com bolinhas e linha -->
+        <div class="status-pedido">
+            <ul class="progressbar">
+                <li class="active"><span>Confirmado</span></li>
+                <li><span>Em preparo</span></li>
+                <li><span>Enviado</span></li>
+                <li><span>Entregue</span></li>
+            </ul>            
+        </div>
+
+        <div class="endereco-e-detalhes">
+            <!-- Endereço de entrega -->
+            <div class="endereco">
+                <h3>Endereço de Entrega</h3>
+                <p id="enderecoEntrega">Rua Botafogo, 123 - Rio de Janeiro, RJ</p>
+            </div>
+        
+            <!-- Detalhes do pedido -->
+            <div class="detalhes-pedido">
+                <h3>Detalhes do Pedido</h3>
+                <p>Item: Bolo de Chocolate</p>
+                <p>Valor: R$ 65,70</p>
+            </div>
+        </div>        
+
+        <!-- Opção de cancelamento -->
+        <div class="cancelar-pedido">
+            <h3>Cancelar Pedido</h3>
+            <button id="cancelarButton" onclick="mostrarFormularioCancelamento()">Cancelar Pedido</button>
+            <div id="cancelamentoForm" style="display: none;">
+                <h4>Por que deseja cancelar o pedido?</h4>
+                <select id="motivoCancelamento">
+                    <option value="">Selecione um motivo</option>
+                    <option value="Endereço incorreto">Endereço incorreto</option>
+                    <option value="Item faltando">Item faltando</option>
+                    <option value="Erro na forma de pagamento">Erro na forma de pagamento</option>
+                    <option value="Comprei sem querer">Comprei sem querer</option>
+                    <option value="Horário de entrega tardio">Horário de entrega tardio</option>
+                </select>
+                <textarea id="descricaoCancelamento" rows="4" placeholder="Conte o que aconteceu (opcional)"></textarea>
+                <button onclick="confirmarCancelamento()">Confirmar Cancelamento</button>
+            </div>
+            <p id="mensagemCancelamento"></p>
+        </div>
+    </div>
+
+    <script src="assets/js/EstadoPedido.js"></script>
+</body>
+</html>

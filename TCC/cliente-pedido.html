@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCIÊ - Pedido do Cliente</title>
+    <link rel="stylesheet" href="assets/css/cliente-pedido.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="assets/img/doces/bolo.png" alt="DOCIÊ">
+            </div>
+            <nav>
+                <ul id="MenuItens">
+                    <li><a href="index.html" title="">Início</a></li>
+                    <li><a href="bolos.html" title="">Produtos</a></li>
+                    <li><a href="cadastro.html" title="">Minha Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Seção de Informações do Pedido -->
+        <div class="pedido-container">
+            <h2>Informações do Pedido</h2>
+
+            <div class="informacoes-cliente">
+                <h3>Cliente:</h3>
+                <p><strong>Nome:</strong> João da Silva</p>
+                <p><strong>Contato:</strong> (11) 98765-4321</p>
+
+                <h3>Endereço de Entrega:</h3>
+                <p><strong>Rua:</strong> Avenida Paulista, 1234</p>
+                <p><strong>Cidade:</strong> São Paulo</p>
+                <p><strong>CEP:</strong> 01310-000</p>
+                <p><strong>Retirada no local:</strong> Não</p>
+            </div>
+
+            <div class="informacoes-pedido">
+                <h3>Itens do Pedido:</h3>
+                <ul>
+                    <li>1x Bolo de Chocolate</li>
+                    <li>2x Brigadeiro Gourmet</li>
+                    <li>1x Torta de Morango</li>
+                </ul>
+
+                <h3>Status do Pedido:</h3>
+                <p id="statusPedido">Aguardando confirmação</p>
+            </div>
+
+            <!-- Botões para o Vendedor atualizar o status do pedido -->
+            <div class="opcoes-status">
+                <button onclick="atualizarStatus('Confirmado')">Confirmar Pedido</button>
+                <button onclick="atualizarStatus('Em Preparo')">Mudar para Em Preparo</button>
+                <button onclick="atualizarStatus('Enviado')">Marcar como Enviado</button>
+                <button onclick="atualizarStatus('Entregue')">Marcar como Entregue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/ClientePedido.js"></script>
+</body>
+</html>
